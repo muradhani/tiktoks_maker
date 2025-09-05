@@ -30,7 +30,6 @@ fun VideoEditorApp() {
     var currentScreen by remember { mutableStateOf("home") }
 
     Scaffold(
-        topBar = { VideoEditorTopBar() },
         bottomBar = { VideoEditorBottomBar(currentScreen) { currentScreen = it } }
     ) { innerPadding ->
         VideoEditorContent(
@@ -41,22 +40,6 @@ fun VideoEditorApp() {
             modifier = Modifier.padding(innerPadding)
         )
     }
-}
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-private fun VideoEditorTopBar() {
-    CenterAlignedTopAppBar(
-        title = {
-            Text(
-                "Video Editor",
-                style = MaterialTheme.typography.headlineSmall
-            )
-        },
-        colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-            containerColor = MaterialTheme.colorScheme.primaryContainer
-        )
-    )
 }
 
 @Composable
