@@ -18,8 +18,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.devcraft.tiktok.FilterOption
 import com.devcraft.tiktok.R
+import com.devcraft.tiktok.utils.components.FilterOption
 
 @Composable
 fun EditorScreen(selectedVideoUri: Uri?) {

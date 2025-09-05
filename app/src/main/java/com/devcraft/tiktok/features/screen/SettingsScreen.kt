@@ -10,7 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.devcraft.tiktok.SettingsItem
+import com.devcraft.tiktok.utils.components.SettingsItem
 
 @Composable
 fun SettingsScreen() {
