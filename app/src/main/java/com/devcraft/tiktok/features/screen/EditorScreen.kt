@@ -20,6 +20,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.devcraft.tiktok.R
 import com.devcraft.tiktok.utils.components.FilterOption
+import com.devcraft.tiktok.utils.components.VideoPlayer
 
 @Composable
 fun EditorScreen(selectedVideoUri: Uri?) {
@@ -43,7 +44,10 @@ fun EditorScreen(selectedVideoUri: Uri?) {
                     .padding(vertical = 16.dp),
                 contentAlignment = Alignment.Center
             ) {
-                Text("Video Preview", style = MaterialTheme.typography.bodyLarge)
+                VideoPlayer(
+                    uri = selectedVideoUri,
+                    modifier = Modifier.fillMaxSize()
+                )
             }
 
             // Editing options
