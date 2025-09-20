@@ -37,7 +37,6 @@ fun VideoPlayer(
                     mp.isLooping = true
                     start()
                 }
-                setOnCompletionListener {  }
             }
         },
         modifier = modifier
