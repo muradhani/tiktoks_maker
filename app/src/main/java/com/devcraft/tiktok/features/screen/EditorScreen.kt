@@ -15,6 +15,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -29,6 +30,10 @@ fun EditorScreen(
     selectedVideoUri: Uri?,
     viewModel: EditorViewModel = viewModel()
 ) {
+    LaunchedEffect(selectedVideoUri){
+        selectedVideoUri?.let { viewModel.setVideoURI(it) }
+
+    }
     Column(
         modifier = Modifier
             .fillMaxSize()
