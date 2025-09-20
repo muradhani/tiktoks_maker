@@ -18,12 +18,17 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.devcraft.tiktok.R
+import com.devcraft.tiktok.features.viewModel.EditorViewModel
 import com.devcraft.tiktok.utils.components.FilterOption
 import com.devcraft.tiktok.utils.components.VideoPlayer
 
 @Composable
-fun EditorScreen(selectedVideoUri: Uri?) {
+fun EditorScreen(
+    selectedVideoUri: Uri?,
+    viewModel: EditorViewModel = viewModel()
+) {
     Column(
         modifier = Modifier
             .fillMaxSize()
