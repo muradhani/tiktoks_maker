@@ -83,26 +83,5 @@ fun HomeScreen(
         ) {
             Text("Start Editing", style = MaterialTheme.typography.titleMedium)
         }
-
-        Spacer(modifier = Modifier.height(32.dp))
-
-        Text("Features:", style = MaterialTheme.typography.titleLarge)
-        Spacer(modifier = Modifier.height(16.dp))
-
-        FeatureItem(
-            icon = R.drawable.ic_subtitle,
-            title = "TikTok-style Subtitles",
-            description = "Add animated subtitles like in TikTok videos"
-        )
-        FeatureItem(
-            icon = R.drawable.ic_filter,
-            title = "GTA/Subway Filters",
-            description = "Apply stylish filters inspired by games"
-        )
-        FeatureItem(
-            icon = R.drawable.ic_export,
-            title = "Export for TikTok",
-            description = "Optimized export for social media"
-        )
     }
 }
