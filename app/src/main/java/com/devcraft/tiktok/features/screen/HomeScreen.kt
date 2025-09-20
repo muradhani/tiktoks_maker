@@ -5,6 +5,7 @@ import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -60,18 +61,28 @@ fun HomeScreen(
                 .fillMaxWidth()
                 .padding(vertical = 8.dp)
         ) {
-            Column(
-                modifier = Modifier.padding(24.dp),
-                horizontalAlignment = Alignment.CenterHorizontally
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth(),
+                contentAlignment = Alignment.Center
             ) {
-                Icon(
-                    painter = painterResource(R.drawable.ic_video),
-                    contentDescription = "Select Video",
-                    modifier = Modifier.size(48.dp)
-                )
-                Spacer(modifier = Modifier.height(16.dp))
-                Text("Select Video", style = MaterialTheme.typography.titleLarge)
-                Text("Choose a video from your gallery", style = MaterialTheme.typography.bodyMedium)
+                Column(
+                    modifier = Modifier.padding(24.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally,
+
+                    ) {
+                    Icon(
+                        painter = painterResource(R.drawable.ic_video),
+                        contentDescription = "Select Video",
+                        modifier = Modifier.size(48.dp)
+                    )
+                    Spacer(modifier = Modifier.height(16.dp))
+                    Text("Select Video", style = MaterialTheme.typography.titleLarge)
+                    Text(
+                        "Choose a video from your gallery",
+                        style = MaterialTheme.typography.bodyMedium
+                    )
+                }
             }
         }
 
